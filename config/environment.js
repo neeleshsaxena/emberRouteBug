@@ -1,5 +1,8 @@
 'use strict';
 
-module.exports = function(/* environment, appConfig */) {
-  return { };
+module.exports = function(environment/* environment, appConfig */) {
+  return { 
+    modulePrefix: 'chat-engine',
+    environment 
+  };
 };

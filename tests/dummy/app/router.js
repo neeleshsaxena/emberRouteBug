@@ -7,6 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.mount('chat-engine', { path: 'chat-engine' });
 });
 
 export default Router;
