@@ -35,3 +35,6 @@ License
 ------------------------------------------------------------------------------
 
 This project is licensed under the [MIT License](LICENSE.md).
+
+## Console error
+![Screen Shot 2019-03-26 at 6 43 19 PM](https://user-images.githubusercontent.com/18757727/55039112-54d1d700-4ff9-11e9-8d2a-4e6a749e9099.png)
