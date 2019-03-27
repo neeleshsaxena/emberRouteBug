@@ -1,27 +1,20 @@
-/* eslint-disable no-console */
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-    queryParams: {
-        sid: { refreshModel: true }
-      },
+  queryParams: {
+    sid: { refreshModel: true }
+  },
 
-      nextQueryParams: null,
+  // This was being called in v3.5.1.
+  model(params) {
 
-      setupController(controller, model) {
-        this._super(controller, model);
-
-      },
-      model(params) {
-        console.log('in model hook params', params);
-        // Need to modify nextQueryParams and some more stuff
-        // this is not called again after transitionTo
-        // Probably because of "RangeError: Maximum call stack size exceeded" error?
-    },
-    actions: {
-        executeQuery() {
-            console.log('inside executeQuery Fn');
-            this.transitionTo({queryParams: { sid: 23 }});
-        }
+  },
+  actions: {
+    // This function is called onclick
+    executeQuery() {
+      // This transition should fire the model hook
+      // as the initial value for sid is undefined.
+      this.transitionTo({queryParams: { sid: 23 }});
     }
+  }
 });
